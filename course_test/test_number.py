@@ -9,20 +9,24 @@
 # 二进制、八进制、十六进制 转 十进制
 # 十六进制转十进制
 num_a = 0xA0F
+print('十六进制转十进制：')
 print(num_a)
 print(int("A0F", 16))
 
 # 八进制转十进制
 num_b = 0o37
+print('八进制转十进制：')
 print(num_b)
 print(int("37", 8))
 
 # 二进制转十进制
 num_c = 0b101
+print('二进制转十进制：')
 print(num_c)
 print(int("101", 2))
 
 # 十进制 转 二进制 、 八进制 、 十六进制
+print('十进制转二进制，八进制，十六进制：')
 print(bin(20))
 print(oct(20))
 print(hex(20))
@@ -30,6 +34,7 @@ print(hex(20))
 # 类型转换
 x = 5
 y = 5.5
+print('类型转换：')
 print(int(y))
 print(float(x))
 
@@ -37,11 +42,14 @@ print(float(x))
 print(8 / 4)
 
 # 向下取整,结果类型与除数、被除数相关
+print('向下取整：')
 print(10 // 3, '\t', 10 // 3.0, '\t', 10.0 // 3)
 
 # 求余
+print('求余：')
 print(8 % 3)
 
 # 幂运算： **
+print('幂运算')
 print(5 ** 2)
 print(pow(5, 2))
