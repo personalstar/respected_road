@@ -46,9 +46,14 @@ class Solution:
         final = list(str(num))
         return list(map(int, final))
 
+    #
+    def plus_one_3(self, digits):
+        num = int(''.join([str(s) for s in digits])) + 1
+        return [int(s) for s in str(num)]
+
 
 if __name__ == '__main__':
     digits = [8, 9, 9, 9]
     solution = Solution()
-    digits = solution.plus_one_2(digits)
+    digits = solution.plus_one_3(digits)
     print(digits)
