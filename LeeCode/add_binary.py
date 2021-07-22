@@ -12,13 +12,19 @@ class Solution:
         x = int(a, 2)
         y = int(b, 2)
         list1 = list(str(bin(x + y)))
-        del list1[1], list1[0]
-        final = ''.join(str(s) for s in list1)
+        list2 = list1[2:]
+        final = ''.join(str(s) for s in list2)
         return final
+
+    def add_binary_2(self, a, b):
+        x = int(a, 2)
+        y = int(b, 2)
+        num = bin(x + y)[2:]
+        return num
 
 
 if __name__ == '__main__':
     a = "1010"
     b = "1011"
     solution = Solution()
-    print(solution.add_binary(a, b))
+    print(solution.add_binary_2(a, b))
