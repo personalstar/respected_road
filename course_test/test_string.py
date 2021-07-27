@@ -69,4 +69,25 @@ print('长度：%d' % len(var3))
 # print('长度：' + len_var)
 # 替换函数，参数一位原字符，参数二为替换字符，参数三为最高替换次数
 var3_replace = var3.replace('i', 'a', 1)
-print('替换字符：' + var3_replace)
+# print('替换字符：' + var3_replace)
+print(f'替换字符:{var3_replace}')
+
+var4 = ' hello world '
+# 检查字符串是否由数字构成
+print(var4.isdigit())  # False
+# 检查字符串是否由字母构成
+print(var4.isalpha())  # False
+# 检查字符串是否由数字字母构成
+print(var4.isalnum())  # False
+# 修剪字符串左右两侧的空格
+print(var4.strip())
+# 修剪字符串中所有空格
+print(var4.replace(' ', ''))
+
+# n个单位靠右对齐，左侧指定字符填充 / n个单位居中对齐，左右两侧指定字符填充
+var5 = 'string'
+print(var5.rjust(10, '-'))
+print(var5.center(10, '-'))
+# 是否以指定字符开头/结尾
+print(var5.startswith('st'))
+print(var5.endswith('ing'))
