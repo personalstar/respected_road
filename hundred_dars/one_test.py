@@ -4,7 +4,15 @@
 # @Author  : xin
 # @Detail  : 小函数合集
 
+# 九九乘法表 判断素数 求公约数/公倍数 打印三角形
+
 import math
+import random
+
+
+# 生成随机数
+def randow_num(n, m):
+    return random.randint(n, m)
 
 
 # 九九乘法表
@@ -61,7 +69,27 @@ def triangle():
         print(' ' * n_num, '*' * s_num)
 
 
+# 没过拉斯维加斯的桌上赌博游戏——CRAPS赌博游戏
+def craps_game():
+    first_time_num = randow_num(2, 12)
+    if first_time_num == 2 or first_time_num == 3 or first_time_num == 12:
+        print('庄家胜，点数为：', first_time_num)
+    elif first_time_num == 7 or first_time_num == 11:
+        print('玩家胜，点数为：', first_time_num)
+    else:
+        print('第一轮点数为：', first_time_num)
+        while True:
+            n_num = randow_num(2, 12)
+            if n_num == 7:
+                print('庄家胜，点数为：', n_num)
+                break
+            elif n_num == first_time_num:
+                print('玩家胜，点数为：', n_num)
+                break
+
+
 # multiplcation_table()
 # prime_number()
 # func_number(15, 25)
-triangle()
+# triangle()
+craps_game()
