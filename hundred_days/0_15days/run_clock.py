@@ -24,12 +24,18 @@ class Clock(object):
                 if self._hour == 24:
                     self._hour = 0
 
+    # 类方法，不创建对象
+    @classmethod
+    def now(cls):
+        ctime = time.localtime(time.time())
+        return cls(ctime.tm_hour, ctime.tm_min, ctime.tm_sec)
+
     def replay(self):
         return f'{self._hour}:{self._minute}:{self._second}'
 
 
 def main():
-    clock = Clock(23, 59, 55)
+    clock = Clock.now()
     while True:
         print(clock.replay())
         time.sleep(1)

@@ -2,7 +2,10 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2021/8/3 5:40 下午
 # @Author  : xin
-# @Detail  :
+# @Detail  : 类中各类函数以及方法
+
+import time
+
 
 class Test:
     # 构造函数
