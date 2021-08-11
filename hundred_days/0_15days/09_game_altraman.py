@@ -10,6 +10,7 @@ from abc import ABCMeta, abstractmethod
 from random import randint, randrange
 
 
+# metaclass=ABCMeta 表示该类为抽象类，只可当做父类被继承
 class Fighter(object, metaclass=ABCMeta):
     """战斗者"""
 
@@ -43,7 +44,7 @@ class Fighter(object, metaclass=ABCMeta):
     def alive(self):
         return self._hp > 0
 
-    """抽象函数，不创建对象，只被继承重写，衍生多态"""
+    """@abstractmethod 抽象方法，继承该函数的子类必须复写所有，且只被继承重写，衍生多态"""
 
     @abstractmethod
     def attack(self, other):
