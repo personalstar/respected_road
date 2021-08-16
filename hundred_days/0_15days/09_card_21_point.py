@@ -40,7 +40,7 @@ class Card(object):
         else:
             self._face = str(self._face)
 
-        return self._face
+        return f'{self._suite}{self._face}'
 
     """
         直接print输出某个实例化类对象时，看到的信息"类名 + object at + 内存地址"
@@ -48,7 +48,7 @@ class Card(object):
     """
 
     def __repr__(self):
-        return f'{self._suite}{self._face}'
+        return self.__str__()
 
 
 class Poker(object):
@@ -129,6 +129,7 @@ class point_21(Rule):
                     self._change_point += 11
                     if self._change_point > 21:
                         self._change_point -= 10
+            print(f'{player.name}得分为：{self._change_point}')
             if self._max_point < self._change_point <= 21 and len(self._winner) == 0:
                 self._winner.append(player.name)
                 self._max_point = self._change_point
@@ -172,7 +173,7 @@ class Players(object):
 
 
 def get_key(card):
-    return card.face
+    return card.face, card.suite
 
 
 def main():
