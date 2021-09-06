@@ -2,7 +2,12 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2021/8/25 2:54 下午
 # @Author  : xin
-# @Detail  :
+# @Detail  : 多线程不加锁
+
+"""
+100个用户同时想同一个账户汇钱，该账户为共享变量，被多个线程竞争使用，称之为"临界资源"
+使用临界资源不加锁时，有极大的可能得不到想要的结果
+"""
 
 from time import sleep
 from threading import Thread
@@ -53,4 +58,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
